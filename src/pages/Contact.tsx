@@ -142,16 +142,16 @@ const Contact = () => {
               <ScrollReveal delay={300}>
                 <div className="mt-8 rounded-xl overflow-hidden border border-border">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.2!2d88.41!3d22.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDMzJzAwLjAiTiA4OMKwMjQnMzYuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
-                    width="100%"
-                    height="200"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="SD8 Office Location"
-                    className="grayscale hover:grayscale-0 transition-all duration-500"
-                  />
+  src="https://www.google.com/maps?q=74/1,+Purbachal+Main+Rd,+Purbachal,+Haltu,+Kolkata,+West+Bengal+700078&output=embed"
+  width="100%"
+  height="200"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  title="SD8 Office Location"
+  className="grayscale hover:grayscale-0 transition-all duration-500"
+/>
                 </div>
               </ScrollReveal>
             </div>

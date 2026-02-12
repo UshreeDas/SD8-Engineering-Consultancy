@@ -5,6 +5,8 @@ import { Building, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import pagesHero from "@/assets/Pages Herosection.jpeg";
+import pradiptaImg from "@/assets/Associates & Consultants image/Pradipta Pal.jpeg";
+
 
 // ✅ Client Logos (from: src/assets/Client logos/)
 import cemindiaLogo from "@/assets/Client logos/Cemindia Projects Limited.png";
@@ -52,27 +54,32 @@ const associates = [
     name: "Pradipta Pal",
     role: "Principal Architect",
     org: "Archipelago",
+    image: pradiptaImg, // ✅ only available image now
   },
   {
     name: "Barun Ghosh",
     role: "Principal Consultant, MEP",
     org: "SM Service Consultancy",
-  },
-  {
-    name: "Sumant Gupta",
-    role: "Executive Director",
-    org: "SG Infra Space Pvt. Ltd.",
+    image: null,
   },
   {
     name: "B.N Basak",
     role: "Director",
     org: "Constell Consultants Pvt. Ltd.",
+    image: null,
   },
   {
     name: "Saumya Banerjee",
     role: "CEO & Managing Director",
     org: "KAILASO Enterprises",
+    image: null,
   },
+  // {
+  //   name: "Sumant Gupta",
+  //   role: "Executive Director",
+  //   org: "SG Infra Space Pvt. Ltd.",
+  // },
+  
 ];
 
 const Clients = () => {
@@ -181,14 +188,25 @@ const Clients = () => {
             {associates.map((assoc, i) => (
               <ScrollReveal key={assoc.name} delay={i * 80}>
                 <div className="glass-card hover-lift p-6 h-full">
-                  <div className="w-12 h-12 rounded-full bg-steel-light flex items-center justify-center mb-4">
-                    <span className="text-lg font-serif text-primary font-bold">
-                      {assoc.name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")}
-                    </span>
-                  </div>
+                 <div className="w-14 h-14 rounded-full overflow-hidden bg-steel-light flex items-center justify-center mb-4 border border-border">
+  {assoc.image ? (
+    <img
+      src={assoc.image}
+      alt={assoc.name}
+      className="w-full h-full object-cover"
+      loading="lazy"
+      draggable={false}
+    />
+  ) : (
+    <span className="text-lg font-serif text-primary font-bold">
+      {assoc.name
+        .split(" ")
+        .map((n) => n[0])
+        .join("")}
+    </span>
+  )}
+</div>
+
                   <h3 className="text-base font-serif text-foreground">{assoc.name}</h3>
                   <p className="text-sm font-semibold text-primary font-sans mt-1">{assoc.role}</p>
                   <p className="text-xs text-muted-foreground font-sans mt-1">{assoc.org}</p>

@@ -52,7 +52,7 @@ const Navbar = () => {
                 SD8 Engineering Consultancy
               </p>
               <p className="text-[11px] lg:text-xs font-sans text-muted-foreground tracking-wide">
-                Civil • Structural • Infrastructure
+                Infrastructure • Industiral • Residential
               </p>
             </div>
           </Link>
