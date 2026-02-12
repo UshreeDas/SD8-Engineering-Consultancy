@@ -59,8 +59,8 @@ const HeroSection = () => {
               SD8 Engineering Consultancy
             </h1>
 
-            <h2 className="mt-4 font-serif italic font-semibold leading-[1.05]
-                           text-[#6FD6E4] text-4xl sm:text-6xl lg:text-5xl">
+            <h2 className="mt-4 font-serif italic font-normal leading-[1.2]
+                           text-[#6FD6E4] text-2xl sm:text-3xl lg:text-4xl">
               “Impossible is Possible”
             </h2>
 

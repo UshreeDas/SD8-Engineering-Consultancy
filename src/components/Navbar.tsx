@@ -45,13 +45,13 @@ const Navbar = () => {
             <img
               src={logo}
               alt="SD8 Engineering Consultancy"
-              className="h-12 lg:h-14 w-auto"
+              className="h-12 lg:h-12 w-auto"
             />
             <div className="leading-tight">
-              <p className="text-base lg:text-lg font-serif font-semibold text-foreground">
+              <p className="text-base lg:text-lg font-serif  text-foreground">
                 SD8 Engineering Consultancy
               </p>
-              <p className="text-[11px] lg:text-xs font-sans text-muted-foreground tracking-wide">
+              <p className="text-[14px] lg:text-xs font-sans text-muted-foreground tracking-wide">
                 Infrastructure • Industiral • Residential
               </p>
             </div>
@@ -74,13 +74,28 @@ const Navbar = () => {
 
           {/* ✅ Only button */}
           <div className="hidden lg:flex items-center gap-4">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold font-sans rounded-lg bg-primary text-primary-foreground hover:bg-steel-dark transition-colors duration-200"
-            >
-              Get in Touch
-            </Link>
-          </div>
+  <Link
+    to="/contact"
+    className="
+      inline-flex items-center gap-2 px-5 py-2.5
+      text-sm font-semibold font-sans rounded-lg
+      text-white
+
+      bg-gradient-to-r from-teal-600 via-cyan-600 to-teal-700
+      bg-[length:200%_200%]
+
+      transition-all duration-500 ease-in-out
+
+      hover:bg-[position:right_center]
+      hover:shadow-lg hover:shadow-cyan-900/30
+
+      active:scale-95
+    "
+  >
+    Contact us 
+  </Link>
+</div>
+
 
           {/* Mobile toggle */}
           <button
