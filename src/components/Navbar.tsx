@@ -10,7 +10,6 @@ const navItems = [
   { label: "Services", path: "/services" },
   { label: "Projects", path: "/projects" },
   { label: "Clients", path: "/clients" },
-  // ✅ removed Contact Us from nav
 ];
 
 const Navbar = () => {
@@ -39,26 +38,28 @@ const Navbar = () => {
             : "bg-card/80 backdrop-blur-sm"
         }`}
       >
-        <div className="container-wide px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 lg:h-20">
-          {/* ✅ Logo + Company Name */}
-          <Link to="/" className="flex items-center gap-3">
+        {/* ✅ IMPORTANT: removed justify-between, use gap + flex rules */}
+        <div className="container-wide px-4 sm:px-6 lg:px-8 flex items-center gap-4 h-16 lg:h-20">
+          {/* ✅ Logo + Company Name (shrink + truncate safe) */}
+          <Link to="/" className="flex items-center gap-3 min-w-0 flex-1">
             <img
               src={logo}
               alt="SD8 Engineering Consultancy"
-              className="h-12 lg:h-12 w-auto"
+              className="h-12 lg:h-12 w-auto flex-none"
             />
-            <div className="leading-tight">
-              <p className="text-base lg:text-lg font-serif  text-foreground">
+
+            <div className="leading-tight min-w-0">
+              <p className="text-base lg:text-lg font-serif text-foreground truncate">
                 SD8 Engineering Consultancy
               </p>
-              <p className="text-[14px] lg:text-xs font-sans text-muted-foreground tracking-wide">
-                Infrastructure • Industiral • Residential
+              <p className="text-[13px] lg:text-xs font-sans text-muted-foreground tracking-wide truncate">
+                Infrastructure • Industrial • Residential
               </p>
             </div>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8 flex-none">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -72,35 +73,33 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* ✅ Only button */}
-          <div className="hidden lg:flex items-center gap-4">
-  <Link
-    to="/contact"
-    className="
-      inline-flex items-center gap-2 px-5 py-2.5
-      text-sm font-semibold font-sans rounded-lg
-      text-white
+          {/* ✅ Desktop CTA (no shrink) */}
+          <div className="hidden lg:flex items-center gap-4 flex-none">
+            <Link
+              to="/contact"
+              className="
+                inline-flex items-center gap-2 px-5 py-2.5
+                text-sm font-semibold font-sans rounded-lg
+                text-white
 
-      bg-gradient-to-r from-teal-600 via-cyan-600 to-teal-700
-      bg-[length:200%_200%]
+                bg-gradient-to-r from-teal-600 via-cyan-600 to-teal-700
+                bg-[length:200%_200%]
 
-      transition-all duration-500 ease-in-out
+                transition-all duration-500 ease-in-out
+                hover:bg-[position:right_center]
+                hover:shadow-lg hover:shadow-cyan-900/30
 
-      hover:bg-[position:right_center]
-      hover:shadow-lg hover:shadow-cyan-900/30
-
-      active:scale-95
-    "
-  >
-    Contact us 
-  </Link>
-</div>
-
+                active:scale-95
+              "
+            >
+              Contact us
+            </Link>
+          </div>
 
           {/* Mobile toggle */}
           <button
-            onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+            onClick={() => setIsMobileOpen((v) => !v)}
+            className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors flex-none"
             aria-label="Toggle menu"
           >
             {isMobileOpen ? (
@@ -135,12 +134,19 @@ const Navbar = () => {
                   </Link>
                 ))}
 
-                {/* ✅ Only button in mobile */}
+                {/* ✅ Mobile CTA matches desktop style */}
                 <Link
                   to="/contact"
-                  className="mt-2 px-4 py-3 text-center text-sm font-semibold font-sans rounded-lg bg-primary text-primary-foreground"
+                  className="
+                    mt-2 px-4 py-3 text-center text-sm font-semibold font-sans rounded-lg text-white
+                    bg-gradient-to-r from-teal-600 via-cyan-600 to-teal-700
+                    bg-[length:200%_200%]
+                    transition-all duration-500 ease-in-out
+                    hover:bg-[position:right_center]
+                    active:scale-[0.98]
+                  "
                 >
-                  Get in Touch
+                  Contact us
                 </Link>
               </nav>
             </motion.div>
