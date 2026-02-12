@@ -38,21 +38,37 @@ const Navbar = () => {
             : "bg-card/80 backdrop-blur-sm"
         }`}
       >
-        {/* ✅ IMPORTANT: removed justify-between, use gap + flex rules */}
         <div className="container-wide px-4 sm:px-6 lg:px-8 flex items-center gap-4 h-16 lg:h-20">
-          {/* ✅ Logo + Company Name (shrink + truncate safe) */}
+
+          {/* Logo + Company Name */}
           <Link to="/" className="flex items-center gap-3 min-w-0 flex-1">
             <img
               src={logo}
               alt="SD8 Engineering Consultancy"
-              className="h-12 lg:h-12 w-auto flex-none"
+              className="h-11 sm:h-12 lg:h-12 w-auto flex-none"
             />
 
+            {/* ✅ FIXED TEXT RESPONSIVENESS */}
             <div className="leading-tight min-w-0">
-              <p className="text-base lg:text-lg font-serif text-foreground truncate">
+              <p
+                className="
+                  font-serif text-foreground leading-tight
+                  text-[14px] sm:text-base lg:text-lg
+                  whitespace-normal break-words
+                  lg:whitespace-nowrap lg:truncate
+                "
+              >
                 SD8 Engineering Consultancy
               </p>
-              <p className="text-[13px] lg:text-xs font-sans text-muted-foreground tracking-wide truncate">
+
+              <p
+                className="
+                  font-sans text-muted-foreground tracking-wide leading-tight
+                  text-[11px] sm:text-xs
+                  whitespace-normal
+                  hidden sm:block
+                "
+              >
                 Infrastructure • Industrial • Residential
               </p>
             </div>
@@ -73,7 +89,7 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* ✅ Desktop CTA (no shrink) */}
+          {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4 flex-none">
             <Link
               to="/contact"
@@ -134,7 +150,7 @@ const Navbar = () => {
                   </Link>
                 ))}
 
-                {/* ✅ Mobile CTA matches desktop style */}
+                {/* Mobile CTA */}
                 <Link
                   to="/contact"
                   className="
