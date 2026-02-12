@@ -174,7 +174,7 @@ const Projects = () => {
           {/* ✅ Modern cards: fixed card height, full image visible via object-contain */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((p, i) => (
-              <ScrollReveal key={p.id} delay={i * 60}>
+              <ScrollReveal >
                 <div className="glass-card hover-lift overflow-hidden h-full flex flex-col">
                   {/* Image area (same size for all) */}
                   <div className="relative w-full h-[210px] bg-white">
@@ -235,7 +235,7 @@ const Projects = () => {
             ))}
           </div>
 
-          <ScrollReveal delay={220}>
+          <ScrollReveal >
             <div className="mt-16 text-center">
               <Link
                 to="/contact"

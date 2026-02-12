@@ -139,7 +139,7 @@ const Services = () => {
         <div className="container-wide">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, i) => (
-              <ScrollReveal key={service.title} delay={i * 80}>
+              <ScrollReveal >
                 <div className="glass-card hover-lift p-8 h-full flex flex-col group">
                   <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
                     <service.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
@@ -159,7 +159,7 @@ const Services = () => {
           </div>
 
           {/* CTA */}
-          <ScrollReveal delay={200}>
+          <ScrollReveal >
             <div className="mt-16 text-center">
               <p className="text-muted-foreground font-sans mb-6">
                 Have a project that needs expert engineering consultancy?

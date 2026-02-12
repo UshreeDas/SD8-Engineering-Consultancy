@@ -80,7 +80,7 @@ const Contact = () => {
               </ScrollReveal>
 
               <div className="space-y-6">
-                <ScrollReveal delay={100}>
+                <ScrollReveal >
                   <a href="mailto:sd8econ@gmail.com" className="flex items-start gap-4 p-4 rounded-xl hover:bg-muted/50 transition-colors group">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
                       <Mail className="w-5 h-5 text-primary" />
@@ -92,7 +92,7 @@ const Contact = () => {
                   </a>
                 </ScrollReveal>
 
-                <ScrollReveal delay={150}>
+                <ScrollReveal >
                   <a href="tel:+917003000496" className="flex items-start gap-4 p-4 rounded-xl hover:bg-muted/50 transition-colors group">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
                       <Phone className="w-5 h-5 text-primary" />
@@ -104,7 +104,7 @@ const Contact = () => {
                   </a>
                 </ScrollReveal>
 
-                <ScrollReveal delay={200}>
+                <ScrollReveal>
                   <div className="flex items-start gap-4 p-4 rounded-xl">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                       <MapPin className="w-5 h-5 text-primary" />
@@ -120,7 +120,7 @@ const Contact = () => {
                   </div>
                 </ScrollReveal>
 
-                <ScrollReveal delay={250}>
+                <ScrollReveal >
                   <a
                     href="https://www.linkedin.com/in/sd8-engineering-consultancy-244347308/"
                     target="_blank"
@@ -139,7 +139,7 @@ const Contact = () => {
               </div>
 
               {/* Map Placeholder */}
-              <ScrollReveal delay={300}>
+              <ScrollReveal >
                 <div className="mt-8 rounded-xl overflow-hidden border border-border">
                   <iframe
   src="https://www.google.com/maps?q=74/1,+Purbachal+Main+Rd,+Purbachal,+Haltu,+Kolkata,+West+Bengal+700078&output=embed"

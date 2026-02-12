@@ -41,7 +41,7 @@ const CTASection = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {ctaCards.map((card, i) => (
-            <ScrollReveal key={card.title} delay={i * 100}>
+            <ScrollReveal>
               <Link
                 to={card.link}
                 className="group glass-card hover-lift p-8 flex flex-col items-start h-full"

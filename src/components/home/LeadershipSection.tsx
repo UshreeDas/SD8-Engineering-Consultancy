@@ -51,7 +51,7 @@ const LeadershipSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {leaders.map((leader, i) => (
-            <ScrollReveal key={leader.name} delay={i * 120}>
+            <ScrollReveal >
               <div className="glass-card hover-lift p-8 h-full flex flex-col">
                 
                 {/* PHOTO AVATAR */}

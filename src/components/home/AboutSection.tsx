@@ -40,11 +40,11 @@ const AboutSection = () => {
               </h2>
             </ScrollReveal>
 
-            <ScrollReveal delay={100}>
+            <ScrollReveal >
               <div className="engineering-divider mt-6 mb-8" />
             </ScrollReveal>
 
-            <ScrollReveal delay={150}>
+            <ScrollReveal >
               <p className="text-muted-foreground font-sans leading-relaxed mb-6">
                 SD8 Engineering Consultancy is a professionally managed firm, registered under Kolkata Municipal Corporation 
                 and registered as MSME under Ministry of Micro, Small and Medium Enterprises, Government of India, 
@@ -52,7 +52,7 @@ const AboutSection = () => {
               </p>
             </ScrollReveal>
 
-            <ScrollReveal delay={200}>
+            <ScrollReveal>
               <p className="text-muted-foreground font-sans leading-relaxed mb-8">
                 Our philosophy centers on delivering excellency in quality and cost with local capability and international expertise. 
                 We develop trustworthy service pools in engineering with primary focus on customer satisfaction through decent work 
@@ -63,7 +63,7 @@ const AboutSection = () => {
 
             <div className="grid sm:grid-cols-2 gap-4">
               {pillars.map((pillar, i) => (
-                <ScrollReveal key={pillar.title} delay={250 + i * 80}>
+                <ScrollReveal>
                   <div className="group p-4 rounded-xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-md bg-card">
                     <pillar.icon className="w-8 h-8 text-primary mb-3" strokeWidth={1.5} />
                     <h4 className="text-sm font-semibold font-sans text-foreground mb-1.5">{pillar.title}</h4>
@@ -75,13 +75,13 @@ const AboutSection = () => {
           </div>
 
           {/* Image */}
-          <ScrollReveal direction="right" delay={200}>
+          <ScrollReveal>
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
   src={aboutImg}
   alt="Engineering workspace"
-  className="w-full h-[500px] object-cover animate-[aboutZoom_18s_ease-in-out_infinite]"
+  className="w-full h-[500px] object-cover animate-[aboutZoom_18s_ease-out_infinite]"
 />
               </div>
               {/* Accent card */}

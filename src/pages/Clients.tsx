@@ -142,7 +142,7 @@ const Clients = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {clients.map((client, i) => (
-              <ScrollReveal key={client.name} delay={i * 80}>
+              <ScrollReveal>
                 {/* ✅ Same card size + professional logo area */}
                 <div className="glass-card hover-lift p-8 h-full min-h-[260px] flex flex-col items-center text-center group">
                   {/* Logo container (fixed height so all cards match) */}
@@ -186,7 +186,7 @@ const Clients = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {associates.map((assoc, i) => (
-              <ScrollReveal key={assoc.name} delay={i * 80}>
+              <ScrollReveal >
                 <div className="glass-card hover-lift p-6 h-full">
                  <div className="w-14 h-14 rounded-full overflow-hidden bg-steel-light flex items-center justify-center mb-4 border border-border">
   {assoc.image ? (
@@ -215,7 +215,7 @@ const Clients = () => {
             ))}
           </div>
 
-          <ScrollReveal delay={200}>
+          <ScrollReveal>
             <div className="mt-16 text-center">
               <Link
                 to="/contact"
